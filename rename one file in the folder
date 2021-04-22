@@ -1,0 +1,11 @@
+import os
+import glob
+os.chdir(r"C:\Users\vasuh\Downloads")
+for D in glob.glob("*Dashboard.pdf"):
+    for d in glob.glob("*detailed.pdf"):
+        OldD = D.split('_')[:1]
+        oldd = d.split('_')[:1]
+        NewD = "DashboardReport" + "_" + str (*OldD) + ".pdf"
+        Newd = "DetailedReport" + "_" + str (*oldd) + ".pdf"
+        os.rename(D, NewD)
+        os.rename(d, Newd)
